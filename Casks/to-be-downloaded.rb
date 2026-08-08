@@ -22,10 +22,11 @@ cask "to-be-downloaded" do
   app "TBD.app", target: "TBD - To be downloaded.app"
 
   caveats <<~EOS
-    This app is signed ad-hoc, not notarised by Apple, so install it with
-    --no-quarantine (otherwise macOS refuses to open it):
+    This app is signed ad-hoc and is not notarised by Apple, so macOS
+    quarantines it and refuses to open it. Homebrew dropped --no-quarantine in
+    5.1, so the attribute has to come off by hand, once:
 
-      brew install --cask --no-quarantine eliorpom-cmd/tap/to-be-downloaded
+      xattr -dr com.apple.quarantine "/Applications/TBD - To be downloaded.app"
 
     Updates afterwards are automatic and are verified against the developer's
     Ed25519 key before anything is installed.
