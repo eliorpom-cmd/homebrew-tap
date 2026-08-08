@@ -12,7 +12,9 @@ cask "to-be-downloaded" do
   # The app updates itself (Ed25519-signed releases), so Homebrew shouldn't
   # worry about seeing a newer version than its own.
   auto_updates true
-  depends_on macos: ">= :ventura"
+  # A bare symbol means "this version or newer". The ">= :ventura" string form
+  # is deprecated since Homebrew 6 and warns on every tap.
+  depends_on macos: :ventura
 
   # Installed with the full name: Spotlight indexes an app by its FILE NAME
   # and ignores CFBundleDisplayName. Under "TBD.app" the app would be unfound
