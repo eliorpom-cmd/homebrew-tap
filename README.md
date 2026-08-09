@@ -4,11 +4,10 @@ The Homebrew tap for [TBD — To be downloaded](https://github.com/eliorpom-cmd/
 a native macOS downloader built on yt-dlp.
 
 ```bash
-brew install --cask eliorpom-cmd/tap/to-be-downloaded
-xattr -dr com.apple.quarantine "/Applications/TBD - To be downloaded.app"
+brew install --cask eliorpom-cmd/tap/to-be-downloaded && xattr -dr com.apple.quarantine "/Applications/TBD - To be downloaded.app"
 ```
 
-The second line is not optional. The app is ad-hoc signed and not notarised by
+The second half is not optional. The app is ad-hoc signed and not notarised by
 Apple, so macOS tags the download and Gatekeeper refuses to open anything
 carrying that tag. Homebrew used to lift the tag itself with `--no-quarantine`
 and dropped the flag in 5.1, so it is now removed deliberately, by the person
