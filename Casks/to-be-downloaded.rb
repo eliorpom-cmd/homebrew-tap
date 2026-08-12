@@ -1,10 +1,10 @@
 cask "to-be-downloaded" do
-  version "1.0.0"
-  sha256 "261d6ed40a40e0a3df58804039bcdbeb8d289bf3b38ded288974413b6e4b1a10"
+  version "1.1.0"
+  sha256 "e9bc43eaf393a0c103273ef2ae443f8ee3241519bc483c268b66a2e30364fec8"
 
   url "https://github.com/eliorpom-cmd/to-be-downloaded/releases/download/v#{version}/TBD-#{version}-macos.zip",
       verified: "github.com/eliorpom-cmd/to-be-downloaded/"
-  name "TBD - To be downloaded"
+  name "TBD - To Be Downloaded"
   name "TBD"
   desc "Downloads YouTube video and audio, with a LAN web remote"
   homepage "https://github.com/eliorpom-cmd/to-be-downloaded"
@@ -19,6 +19,8 @@ cask "to-be-downloaded" do
   # Installed with the full name: Spotlight indexes an app by its FILE NAME
   # and ignores CFBundleDisplayName. Under "TBD.app" the app would be unfound
   # searching for "to be downloaded".
+  # Lowercase "downloaded" on purpose: this is an existing path on other
+  # people's disks, not a label. Renaming it is how you give someone two apps.
   app "TBD.app", target: "TBD - To be downloaded.app"
 
   caveats <<~EOS
