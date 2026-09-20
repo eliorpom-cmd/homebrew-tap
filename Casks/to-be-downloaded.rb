@@ -1,6 +1,6 @@
 cask "to-be-downloaded" do
-  version "1.1.0"
-  sha256 "e9bc43eaf393a0c103273ef2ae443f8ee3241519bc483c268b66a2e30364fec8"
+  version "1.2.0"
+  sha256 "910e2dd94bf00aee5f17d6f201697a1b5b73cf3833124f250b67fadfaa9af5f3"
 
   url "https://github.com/eliorpom-cmd/to-be-downloaded/releases/download/v#{version}/TBD-#{version}-macos.zip",
       verified: "github.com/eliorpom-cmd/to-be-downloaded/"
@@ -22,17 +22,6 @@ cask "to-be-downloaded" do
   # Lowercase "downloaded" on purpose: this is an existing path on other
   # people's disks, not a label. Renaming it is how you give someone two apps.
   app "TBD.app", target: "TBD - To be downloaded.app"
-
-  caveats <<~EOS
-    This app is signed ad-hoc and is not notarised by Apple, so macOS
-    quarantines it and refuses to open it. Homebrew dropped --no-quarantine in
-    5.1, so the attribute has to come off by hand, once:
-
-      xattr -dr com.apple.quarantine "/Applications/TBD - To be downloaded.app"
-
-    Updates afterwards are automatic and are verified against the developer's
-    Ed25519 key before anything is installed.
-  EOS
 
   zap trash: [
     "~/Library/Application Support/TBD",
