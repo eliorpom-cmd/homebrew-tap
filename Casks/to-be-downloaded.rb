@@ -2,8 +2,8 @@ cask "to-be-downloaded" do
   version "1.2.0"
   sha256 "910e2dd94bf00aee5f17d6f201697a1b5b73cf3833124f250b67fadfaa9af5f3"
 
-  # No `verified:` — Homebrew 7 deprecates it and warns on every command that
-  # touches the cask. The stanza existed to vouch for a URL whose host does not
+  # No "verified" stanza: Homebrew 7 deprecates it and warns on every command
+  # that touches the cask. It existed to vouch for a URL whose host does not
   # match the homepage; here they are the same GitHub repository, which is
   # exactly the case the default verification already covers.
   url "https://github.com/eliorpom-cmd/to-be-downloaded/releases/download/v#{version}/TBD-#{version}-macos.zip"
