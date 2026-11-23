@@ -1,6 +1,6 @@
 cask "lumac" do
-  version "1.1"
-  sha256 "bf8f23d41b74c4c4e95b1f69b07573c0ce1f7ebf0e64bef102d402a291028185"
+  version "1.1.1"
+  sha256 "5493649e1fb4934d86469cf3e3e8f569266a0b03878a183586d00a2755de5bd9"
 
   url "https://github.com/eliorpom-cmd/lumac/releases/download/v#{version}/Lumac-#{version}.zip"
   name "Lumac"
