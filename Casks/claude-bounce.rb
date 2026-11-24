@@ -1,6 +1,6 @@
 cask "claude-bounce" do
-  version "1.0.1"
-  sha256 "bc2a565dcfbf2cd9bc638290e200c8a287658c4ddcb1e6ebfa9d288723e9d689"
+  version "1.0.2"
+  sha256 "aff9f8177680a62a9e1d1494a853472a56d383fa428e5121055b339563ff379b"
 
   url "https://github.com/eliorpom-cmd/claude-bounce/releases/download/v#{version}/ClaudeBounce-#{version}.dmg"
   name "Claude Bounce"
