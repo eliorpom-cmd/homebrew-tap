@@ -1,6 +1,6 @@
 cask "to-be-downloaded" do
-  version "1.3.0"
-  sha256 "30adc63c702c8f83b32f1b8ecba5c248a3ae523325f9c3efa61deb6202d07387"
+  version "1.3.1"
+  sha256 "ea9a11c2295394189c0673c09dae2a34368f7e54eb6915b3e6ea51907113bd60"
 
   # No "verified" stanza: Homebrew 7 deprecates it and warns on every command
   # that touches the cask. It existed to vouch for a URL whose host does not
